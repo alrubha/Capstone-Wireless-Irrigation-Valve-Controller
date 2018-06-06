@@ -22,3 +22,4 @@ S; -> capital S followed by semicolon, check the valves state if they are connec
 #,#; -> valve number followed by a comma followed by another number followed by semicolon, opens the valve number # for # minutes.<br />
 #,D; -> valve number followed by a comma followed by a capital D followed by semicolon, disable the valve (close it).<br />
 #,V; -> valve number followed by a comma followed by a capital V followed by semicolon, report the battery voltage.<br />
+**Using a serial terminal to communicate with the hub is faster than using the gui**
