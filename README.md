@@ -11,7 +11,7 @@ MCU PB0 -> NRF CE<br />
 MCU PD4 -> Push button <br />
 MCU PD3 -> Valve control<br />
 MCU PD2 -> Valve control<br />
-MCU PC0 -> 50kOHM and 10kOhm voltage dividor connected to battery
+MCU PC0 -> 50kOHM and 10kOhm voltage divider connected to battery terminal
 # To Add a New Valve
 In Hub main.c -> add a new case on the function "void set_addr(char valve)" on line 84. The case must be the valve controller number. Under the case set the address of the new controller it must be 5 bytes address.<br /> 
 In line 131 on main.c for Hub, increase the for loop condition to agree with the number of valves controllers on the system.<br /> 
