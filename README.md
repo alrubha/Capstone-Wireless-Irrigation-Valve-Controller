@@ -13,9 +13,9 @@ MCU PD3 -> Valve control<br />
 MCU PD2 -> Valve control<br />
 MCU PC0 -> 50kOHM and 10kOhm voltage dividor connected to battery
 # To Add a New Valve
-on Hub main.c -> add a new case on the function "void set_addr(char valve)" on line 84. The case must be the valve controller number. Under the case set the address of the new controller.<br /> 
-On line 131 on main.c for Hub, increase the for loop condition to agree with the number of valves controllers on the system.<br /> 
-On RX main.c, on line 162,"tx_b[0] = '#';  //valve send its number", change # to the valve controller number you set on the Hub main.c.<br /> 
-On RX nrf24l01.h, change the address on line 77 and line  83 to agree with the address you set on the case statement on Hub main.c.<br /> 
+In Hub main.c -> add a new case on the function "void set_addr(char valve)" on line 84. The case must be the valve controller number. Under the case set the address of the new controller it must be 5 bytes address.<br /> 
+In line 131 on main.c for Hub, increase the for loop condition to agree with the number of valves controllers on the system.<br /> 
+In RX main.c, on line 162,"tx_b[0] = '#';  //valve send its number", change # to the valve controller number you set on the Hub main.c.<br /> 
+In RX nrf24l01.h, change the address on line 77 and line  83 to agree with the address you set on the case statement on Hub main.c.<br /> 
 
 
