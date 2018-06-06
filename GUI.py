@@ -1,5 +1,6 @@
 #Valve control gui program
 #Written by Ali Alrubh 3/4/2018
+#To make it work, change line 50 COM port to agree with the Port your hub is connected to 
 from Tkinter import *			#for gui
 import serial
 
@@ -10,10 +11,7 @@ def set_cycle():
 			command = valve.get() + ',' + cycle.get() + ';'
 			port.write(command)
 			print port.readlines()						#sending cycle time
-			#print port.readline()						#success or fail
-			#print port.readline()						#getting status
-			#print port.readline()						#opened or voltage is low
-
+			
 		else:
 			print("Invalid Input")
 
@@ -25,13 +23,7 @@ def volt():
 		command = valve.get() + ',' + 'V' + ';'
 		port.write(command)
 		print port.readlines()								#asking for voltage
-		#print port.readline()								#success or fail
-		#print port.readline()								#getting voltage
-		#print port.readline()								#voltage=
-		#print port.readline()								#x
-		#print port.readline()								#.
-		#print port.readline()								#y
-		#print port.readline()								#volts
+		
 
 	else:
 		print("Invalid Input")
@@ -52,14 +44,7 @@ def status():
 	port.write(command)
 	#for x in range(1):
 	print port.readlines()								#asking for state
-	#	print port.readline()								#valve
-	#	print port.readline()								#number
-	#	print port.readline()								#>>>
-	#	print port.readline()								#success or file
-	#	print port.readline()								#getting state
-	#	print port.readline()								#valve
-	#	print port.readline()								#number
-	#	print port.readline()								#is open
+	
 
 
 port = serial.Serial('COM5', 9600, timeout=3)				#serial port of Hub
