@@ -18,7 +18,7 @@ In line 131 on main.c for Hub, increase the for loop condition to agree with the
 In RX main.c, on line 162,"tx_b[0] = '#';  //valve send its number", change # to the valve controller number you set on the Hub main.c.<br /> 
 In RX nrf24l01.h, change the address on line 77 and line  83 to agree with the address you set on the case statement on Hub main.c.<br /> 
 # Availabe Commands
-S; -> capital S followed by semicolon check the valves state, if they are connected or open.<br />
+S; -> capital S followed by semicolon, check the valves state if they are connected or open.<br />
 #,#; -> valve number followed by a comma followed by another number followed by semicolon, opens the valve number # for # minutes.<br />
 #,D; -> valve number followed by a comma followed by a capital D followed by semicolon, disable the valve (close it).<br />
-#,V; -> valve number followed by a comma followed by a capitol V followed by semicolon, report the battery voltage.<br />
+#,V; -> valve number followed by a comma followed by a capital V followed by semicolon, report the battery voltage.<br />
